@@ -159,24 +159,26 @@ public final class DashboardForm extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jPanel_4 = new javax.swing.JPanel();
         jPanel_4_header = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
         jPanel_Menu = new javax.swing.JPanel();
         jPanel_Header = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        jButton_AddMember = new javax.swing.JButton();
+        jButton_DeleteMember = new javax.swing.JButton();
+        jButton_EditEval = new javax.swing.JButton();
+        jButton_AddEval = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
+        jButton_DeleteEval = new javax.swing.JButton();
+        jButton_EditMember = new javax.swing.JButton();
+        jButton_AddCentre = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
+        jButton_DeleteCentre = new javax.swing.JButton();
+        jButton_EditCentre = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -341,16 +343,29 @@ public final class DashboardForm extends javax.swing.JFrame {
             .addGap(0, 60, Short.MAX_VALUE)
         );
 
+        jButton2.setText("Join1");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel_4Layout = new javax.swing.GroupLayout(jPanel_4);
         jPanel_4.setLayout(jPanel_4Layout);
         jPanel_4Layout.setHorizontalGroup(
             jPanel_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel_4_header, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel_4Layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(jButton2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel_4Layout.setVerticalGroup(
             jPanel_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_4Layout.createSequentialGroup()
                 .addComponent(jPanel_4_header, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton2)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -411,50 +426,80 @@ public final class DashboardForm extends javax.swing.JFrame {
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Participanti");
 
-        jButton2.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Adaugare");
-        jButton2.setContentAreaFilled(false);
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButton_AddMember.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
+        jButton_AddMember.setForeground(new java.awt.Color(255, 255, 255));
+        jButton_AddMember.setText("Adaugare");
+        jButton_AddMember.setContentAreaFilled(false);
+        jButton_AddMember.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton_AddMember.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButton_AddMemberActionPerformed(evt);
             }
         });
 
-        jButton3.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Stergere");
-        jButton3.setContentAreaFilled(false);
+        jButton_DeleteMember.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
+        jButton_DeleteMember.setForeground(new java.awt.Color(255, 255, 255));
+        jButton_DeleteMember.setText("Stergere");
+        jButton_DeleteMember.setContentAreaFilled(false);
+        jButton_DeleteMember.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_DeleteMemberActionPerformed(evt);
+            }
+        });
 
-        jButton4.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Editare");
-        jButton4.setContentAreaFilled(false);
+        jButton_EditEval.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
+        jButton_EditEval.setForeground(new java.awt.Color(255, 255, 255));
+        jButton_EditEval.setText("Editare");
+        jButton_EditEval.setContentAreaFilled(false);
+        jButton_EditEval.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_EditEvalActionPerformed(evt);
+            }
+        });
 
-        jButton5.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("Adaugare");
-        jButton5.setContentAreaFilled(false);
+        jButton_AddEval.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
+        jButton_AddEval.setForeground(new java.awt.Color(255, 255, 255));
+        jButton_AddEval.setText("Adaugare");
+        jButton_AddEval.setContentAreaFilled(false);
+        jButton_AddEval.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_AddEvalActionPerformed(evt);
+            }
+        });
 
         jLabel9.setFont(new java.awt.Font("Ubuntu", 0, 22)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Evaluatori");
 
-        jButton6.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jButton6.setText("Stergere");
-        jButton6.setContentAreaFilled(false);
+        jButton_DeleteEval.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
+        jButton_DeleteEval.setForeground(new java.awt.Color(255, 255, 255));
+        jButton_DeleteEval.setText("Stergere");
+        jButton_DeleteEval.setContentAreaFilled(false);
+        jButton_DeleteEval.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_DeleteEvalActionPerformed(evt);
+            }
+        });
 
-        jButton7.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(255, 255, 255));
-        jButton7.setText("Editare");
-        jButton7.setContentAreaFilled(false);
+        jButton_EditMember.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
+        jButton_EditMember.setForeground(new java.awt.Color(255, 255, 255));
+        jButton_EditMember.setText("Editare");
+        jButton_EditMember.setContentAreaFilled(false);
+        jButton_EditMember.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_EditMemberActionPerformed(evt);
+            }
+        });
 
-        jButton8.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
-        jButton8.setForeground(new java.awt.Color(255, 255, 255));
-        jButton8.setText("Adaugare");
-        jButton8.setContentAreaFilled(false);
+        jButton_AddCentre.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
+        jButton_AddCentre.setForeground(new java.awt.Color(255, 255, 255));
+        jButton_AddCentre.setText("Adaugare");
+        jButton_AddCentre.setContentAreaFilled(false);
+        jButton_AddCentre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_AddCentreActionPerformed(evt);
+            }
+        });
 
         jButton9.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
         jButton9.setForeground(new java.awt.Color(255, 255, 255));
@@ -475,15 +520,35 @@ public final class DashboardForm extends javax.swing.JFrame {
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Centre examen");
 
-        jButton12.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
-        jButton12.setForeground(new java.awt.Color(255, 255, 255));
-        jButton12.setText("Stergere");
-        jButton12.setContentAreaFilled(false);
+        jButton_DeleteCentre.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
+        jButton_DeleteCentre.setForeground(new java.awt.Color(255, 255, 255));
+        jButton_DeleteCentre.setText("Stergere");
+        jButton_DeleteCentre.setContentAreaFilled(false);
+        jButton_DeleteCentre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_DeleteCentreActionPerformed(evt);
+            }
+        });
 
-        jButton13.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
-        jButton13.setForeground(new java.awt.Color(255, 255, 255));
-        jButton13.setText("Editare");
-        jButton13.setContentAreaFilled(false);
+        jButton_EditCentre.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
+        jButton_EditCentre.setForeground(new java.awt.Color(255, 255, 255));
+        jButton_EditCentre.setText("Editare");
+        jButton_EditCentre.setContentAreaFilled(false);
+        jButton_EditCentre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_EditCentreActionPerformed(evt);
+            }
+        });
+
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Afisare detalii participanti");
+        jButton1.setContentAreaFilled(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel_MenuLayout = new javax.swing.GroupLayout(jPanel_Menu);
         jPanel_Menu.setLayout(jPanel_MenuLayout);
@@ -497,22 +562,26 @@ public final class DashboardForm extends javax.swing.JFrame {
                         .addGroup(jPanel_MenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel_MenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButton_AddMember, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButton_DeleteMember, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButton_EditEval, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButton_AddEval, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButton_DeleteEval, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButton_EditMember, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButton_AddCentre, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jButton_DeleteCentre, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButton_EditCentre, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 17, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_MenuLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(77, 77, 77))
         );
         jPanel_MenuLayout.setVerticalGroup(
             jPanel_MenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -521,34 +590,36 @@ public final class DashboardForm extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
+                .addComponent(jButton_AddMember)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3)
+                .addComponent(jButton_DeleteMember)
                 .addGap(5, 5, 5)
-                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton_EditMember, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton5)
+                .addComponent(jButton_AddEval)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton6)
+                .addComponent(jButton_DeleteEval)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton4)
+                .addComponent(jButton_EditEval)
                 .addGap(23, 23, 23)
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton8)
+                .addComponent(jButton_AddCentre)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton12)
+                .addComponent(jButton_DeleteCentre)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton13)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
+                .addComponent(jButton_EditCentre)
+                .addGap(28, 28, 28)
                 .addComponent(jButton10)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton11)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton9)
-                .addGap(62, 62, 62))
+                .addGap(33, 33, 33)
+                .addComponent(jButton1)
+                .addContainerGap(72, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -570,8 +641,73 @@ public final class DashboardForm extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton_AddMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_AddMemberActionPerformed
+        // TODO add your handling code here:
+        AddMemberForm add = new AddMemberForm();
+        add.show();
+        //dispose();
+    }//GEN-LAST:event_jButton_AddMemberActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        JTable jt = new JTable();
+        jt.show();
+        //dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton_DeleteMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_DeleteMemberActionPerformed
+        // TODO add your handling code here:
+        DeleteMember del = new DeleteMember();
+        del.show();
+
+    }//GEN-LAST:event_jButton_DeleteMemberActionPerformed
+
+    private void jButton_EditMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_EditMemberActionPerformed
+        // TODO add your handling code here:
+        EditMemberForm edit = new EditMemberForm();
+        edit.show();
+    }//GEN-LAST:event_jButton_EditMemberActionPerformed
+
+    private void jButton_AddEvalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_AddEvalActionPerformed
+        // TODO add your handling code here:
+        AddEvaluatoriForm add = new AddEvaluatoriForm();
+        add.show();
+    }//GEN-LAST:event_jButton_AddEvalActionPerformed
+
+    private void jButton_DeleteEvalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_DeleteEvalActionPerformed
+        // TODO add your handling code here:
+        DeleteEvaluator del = new DeleteEvaluator();
+        del.show();
+    }//GEN-LAST:event_jButton_DeleteEvalActionPerformed
+
+    private void jButton_EditEvalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_EditEvalActionPerformed
+        // TODO add your handling code here:
+        EditEvaluatorForm edit = new EditEvaluatorForm();
+        edit.show();
+    }//GEN-LAST:event_jButton_EditEvalActionPerformed
+
+    private void jButton_EditCentreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_EditCentreActionPerformed
+        // TODO add your handling code here:
+        EditCentreForm edit = new EditCentreForm();
+        edit.show();
+    }//GEN-LAST:event_jButton_EditCentreActionPerformed
+
+    private void jButton_DeleteCentreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_DeleteCentreActionPerformed
+        // TODO add your handling code here:
+        DeleteCentru del = new DeleteCentru();
+        del.show();
+    }//GEN-LAST:event_jButton_DeleteCentreActionPerformed
+
+    private void jButton_AddCentreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_AddCentreActionPerformed
+        // TODO add your handling code here:
+        AddCentreForm add = new AddCentreForm();
+        add.show();
+    }//GEN-LAST:event_jButton_AddCentreActionPerformed
+
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        //Join1 join = new Join1();
+        //join.show();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -600,6 +736,7 @@ public final class DashboardForm extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(DashboardForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -610,18 +747,20 @@ public final class DashboardForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JButton jButton_AddCentre;
+    private javax.swing.JButton jButton_AddEval;
+    private javax.swing.JButton jButton_AddMember;
+    private javax.swing.JButton jButton_DeleteCentre;
+    private javax.swing.JButton jButton_DeleteEval;
+    private javax.swing.JButton jButton_DeleteMember;
+    private javax.swing.JButton jButton_EditCentre;
+    private javax.swing.JButton jButton_EditEval;
+    private javax.swing.JButton jButton_EditMember;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;

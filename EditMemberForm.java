@@ -23,7 +23,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author andreea
  */
-public class AddMemberForm extends javax.swing.JFrame {
+public class EditMemberForm extends javax.swing.JFrame {
 
     /**
      * Creates new form ManageGenresForm
@@ -37,7 +37,7 @@ public class AddMemberForm extends javax.swing.JFrame {
     //crate a variable to store the profile picture path
     String imagePath = null;
     
-    public AddMemberForm() {
+    public EditMemberForm() {
         initComponents();
         
         this.setLocationRelativeTo(null); //center
@@ -75,15 +75,15 @@ public class AddMemberForm extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel_CloseForm = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField_FirstName = new javax.swing.JTextField();
-        jButton_Add_ = new javax.swing.JButton();
+        jTextField_LastName = new javax.swing.JTextField();
+        jButton_Edit_ = new javax.swing.JButton();
         jLabel_EmptyCNP = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel1_FormTitle = new javax.swing.JLabel();
         jTextField_CNP = new javax.swing.JTextField();
         jLabel_EmptyFirstName_ = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField_LastName = new javax.swing.JTextField();
+        jTextField_FirstName = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel_EmptyLastName_ = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -91,6 +91,9 @@ public class AddMemberForm extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jComboBox_Gender_ = new javax.swing.JComboBox<>();
         jLabel_Img = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jTextField_Id = new javax.swing.JTextField();
+        jButton_Search_ = new javax.swing.JButton();
         jTextField_Data_nasterii = new javax.swing.JTextField();
         jLabel_Img1 = new javax.swing.JLabel();
         jTextField_Score = new javax.swing.JTextField();
@@ -125,17 +128,17 @@ public class AddMemberForm extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Noto Serif CJK TC", 1, 14)); // NOI18N
         jLabel1.setText("Nume:");
 
-        jTextField_FirstName.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
-        jTextField_FirstName.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_LastName.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
+        jTextField_LastName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField_FirstNameActionPerformed(evt);
+                jTextField_LastNameActionPerformed(evt);
             }
         });
 
-        jButton_Add_.setText("Adaugare");
-        jButton_Add_.addActionListener(new java.awt.event.ActionListener() {
+        jButton_Edit_.setText("Editare");
+        jButton_Edit_.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_Add_ActionPerformed(evt);
+                jButton_Edit_ActionPerformed(evt);
             }
         });
 
@@ -153,7 +156,7 @@ public class AddMemberForm extends javax.swing.JFrame {
         jLabel1_FormTitle.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
         jLabel1_FormTitle.setForeground(new java.awt.Color(254, 254, 254));
         jLabel1_FormTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1_FormTitle.setText("Adaugare Participant");
+        jLabel1_FormTitle.setText("Editare Participant");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -191,10 +194,10 @@ public class AddMemberForm extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Noto Sans CJK TC", 1, 14)); // NOI18N
         jLabel4.setText("Prenume:");
 
-        jTextField_LastName.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
-        jTextField_LastName.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_FirstName.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
+        jTextField_FirstName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField_LastNameActionPerformed(evt);
+                jTextField_FirstNameActionPerformed(evt);
             }
         });
 
@@ -228,6 +231,24 @@ public class AddMemberForm extends javax.swing.JFrame {
 
         jLabel_Img.setFont(new java.awt.Font("Noto Serif CJK TC", 1, 14)); // NOI18N
         jLabel_Img.setText("Data nasterii:");
+
+        jLabel2.setFont(new java.awt.Font("Noto Serif CJK TC", 1, 14)); // NOI18N
+        jLabel2.setText("Introduceti ID-ul:");
+
+        jTextField_Id.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
+        jTextField_Id.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField_IdActionPerformed(evt);
+            }
+        });
+
+        jButton_Search_.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
+        jButton_Search_.setText("cautare");
+        jButton_Search_.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_Search_ActionPerformed(evt);
+            }
+        });
 
         jTextField_Data_nasterii.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jTextField_Data_nasterii.addActionListener(new java.awt.event.ActionListener() {
@@ -297,7 +318,7 @@ public class AddMemberForm extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton_Add_, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton_Edit_, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
@@ -330,13 +351,18 @@ public class AddMemberForm extends javax.swing.JFrame {
                                     .addComponent(jLabel5)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(jTextField_CNP, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 242, Short.MAX_VALUE)
+                                            .addComponent(jTextField_CNP, javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jTextField_FirstName, javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jTextField_LastName, javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jTextField_FirstName, javax.swing.GroupLayout.Alignment.LEADING))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                                .addComponent(jLabel2)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jTextField_Id, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel_EmptyFirstName_)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jLabel_EmptyFirstName_, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addComponent(jLabel_EmptyLastName_)
+                                            .addComponent(jButton_Search_, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addComponent(jLabel_EmptyCNP)))
                                     .addComponent(jTextField_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -352,13 +378,19 @@ public class AddMemberForm extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel_CloseForm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(21, 21, 21)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton_Search_, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextField_Id, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField_FirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel_EmptyFirstName_, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(jLabel_EmptyFirstName_, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_FirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -370,7 +402,7 @@ public class AddMemberForm extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField_CNP, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel_EmptyCNP, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(19, 19, 19)
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -390,7 +422,7 @@ public class AddMemberForm extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel_Img2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField_Centru, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel_Img3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField_Subiecte, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -403,7 +435,7 @@ public class AddMemberForm extends javax.swing.JFrame {
                     .addComponent(jLabel_Img4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField_Programare, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(80, 80, 80)
-                .addComponent(jButton_Add_, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton_Edit_, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18))
         );
 
@@ -428,14 +460,16 @@ public class AddMemberForm extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jLabel_CloseFormMouseClicked
 
-    private void jButton_Add_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Add_ActionPerformed
+    private void jButton_Edit_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Edit_ActionPerformed
         
         jLabel_EmptyFirstName_.setVisible(false);
         jLabel_EmptyLastName_.setVisible(false);
         jLabel_EmptyCNP.setVisible(false);
         
-        String fname = jTextField_FirstName.getText();
-        String lname = jTextField_LastName.getText();
+        //edit 
+        Integer id = Integer.parseInt(jTextField_Id.getText());
+        String fname = jTextField_LastName.getText();
+        String lname = jTextField_FirstName.getText();
         String cnp = jTextField_CNP.getText();
         String email = jTextField_Email.getText();
         String gender = jComboBox_Gender_.getSelectedItem().toString();
@@ -482,10 +516,10 @@ public class AddMemberForm extends javax.swing.JFrame {
             {
                 JOptionPane.showMessageDialog(null, "Select a Profile Pic For This Member", "No Picture Selected", 2);
             }*/
-            member.addParticipanti(fname, lname, cnp, email, gender, date, scor, centru, subiecte, proba, programare);          
+            member.editMember(id, fname, lname, cnp, email, gender, date, scor, centru, subiecte, proba, programare);          
         
 
-    }//GEN-LAST:event_jButton_Add_ActionPerformed
+    }//GEN-LAST:event_jButton_Edit_ActionPerformed
     
     
     private void jLabel_EmptyCNPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_EmptyCNPMouseClicked
@@ -495,10 +529,10 @@ public class AddMemberForm extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jLabel_EmptyCNPMouseClicked
 
-    private void jTextField_FirstNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_FirstNameActionPerformed
+    private void jTextField_LastNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_LastNameActionPerformed
         // TODO add your handling code here:
      
-    }//GEN-LAST:event_jTextField_FirstNameActionPerformed
+    }//GEN-LAST:event_jTextField_LastNameActionPerformed
 
     private void jTextField_CNPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_CNPActionPerformed
         // TODO add your handling code here:
@@ -510,9 +544,9 @@ public class AddMemberForm extends javax.swing.JFrame {
         jLabel_EmptyFirstName_.setVisible(false);
     }//GEN-LAST:event_jLabel_EmptyFirstName_MouseClicked
 
-    private void jTextField_LastNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_LastNameActionPerformed
+    private void jTextField_FirstNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_FirstNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_LastNameActionPerformed
+    }//GEN-LAST:event_jTextField_FirstNameActionPerformed
 
     private void jLabel_EmptyLastName_MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_EmptyLastName_MouseClicked
         // TODO add your handling code here:
@@ -523,6 +557,46 @@ public class AddMemberForm extends javax.swing.JFrame {
     private void jTextField_EmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_EmailActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField_EmailActionPerformed
+
+    private void jTextField_IdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_IdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField_IdActionPerformed
+
+    private void jButton_Search_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Search_ActionPerformed
+ 
+        //get member data
+        Participanti SelectedMember;
+        try {
+            Integer id = Integer.parseInt(jTextField_Id.getText());
+            SelectedMember = member.getParticipantiById(id);
+            
+            if(SelectedMember != null)
+            {
+                jTextField_Id.setText(String.valueOf(SelectedMember.getId()));
+                jTextField_LastName.setText(SelectedMember.getFirstName());
+                jTextField_FirstName.setText(SelectedMember.getLastName());
+                jTextField_CNP.setText(SelectedMember.getCNP());
+                jTextField_Email.setText(SelectedMember.getEmail());
+                jComboBox_Gender_.setSelectedItem(SelectedMember.getGender());
+                jTextField_Data_nasterii.setText(SelectedMember.getDate());
+                jTextField_Score.setText(SelectedMember.getScore());
+                jTextField_Centru.setText(String.valueOf(SelectedMember.getCentru_id()));
+                jTextField_Subiecte.setText(String.valueOf(SelectedMember.getSubiecte_id()));
+                jTextField_Proba.setText(String.valueOf(SelectedMember.getProba_id()));
+                jTextField_Programare.setText(String.valueOf(SelectedMember.getProgramare_id()));
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(null, "No Member With This ID Was Found", "Invalid Id", 3);
+            }
+            
+        
+        } catch (SQLException | NumberFormatException ex) {
+            JOptionPane.showMessageDialog(null, "Enter a Valid Member Id", "Invalid Id", 3);
+        }
+        
+       
+    }//GEN-LAST:event_jButton_Search_ActionPerformed
 
     private void jTextField_Data_nasteriiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_Data_nasteriiActionPerformed
         // TODO add your handling code here:
@@ -567,30 +641,14 @@ public class AddMemberForm extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AddMemberForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditMemberForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AddMemberForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditMemberForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AddMemberForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditMemberForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AddMemberForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditMemberForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -611,16 +669,18 @@ public class AddMemberForm extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AddMemberForm().setVisible(true);
+                new EditMemberForm().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton_Add_;
+    private javax.swing.JButton jButton_Edit_;
+    private javax.swing.JButton jButton_Search_;
     private javax.swing.JComboBox<String> jComboBox_Gender_;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel1_FormTitle;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -642,6 +702,7 @@ public class AddMemberForm extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField_Data_nasterii;
     private javax.swing.JTextField jTextField_Email;
     private javax.swing.JTextField jTextField_FirstName;
+    private javax.swing.JTextField jTextField_Id;
     private javax.swing.JTextField jTextField_LastName;
     private javax.swing.JTextField jTextField_Proba;
     private javax.swing.JTextField jTextField_Programare;
